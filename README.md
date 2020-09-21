@@ -1,1 +1,3 @@
-"# SmartHouse" 
+# SmartHouse
+
+### Модель роботи смарт-дому
