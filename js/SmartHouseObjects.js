@@ -193,3 +193,8 @@ Lock.prototype = Object.create(SmartHouseObject.prototype);
 Lock.prototype.constructor = Lock;
 HeatingSystem.prototype = Object.create(SmartHouseObject.prototype);
 HeatingSystem.prototype.constructor = HeatingSystem;
+
+exports.SmartHouseObject = SmartHouseObject;
+exports.Lamp = Lamp;
+exports.Lock = Lock;
+exports.HeatingSystem = HeatingSystem;

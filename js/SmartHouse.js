@@ -1,3 +1,5 @@
+
+const SMO = require('./SmartHouseObjects');
 var SmartHouse = {
     lamps : [],
     locks : [],
@@ -7,21 +9,21 @@ var SmartHouse = {
         while( this.lamps.some(function(value){ return value.id == id;}) == 1){
             id = Math.floor(10000 + Math.random() * 10000) + "";
         }
-        this.lamps.push(new Lamp(name, id, model));
+        this.lamps.push(new SMO.Lamp(name, id, model));
     },
     addNewLock : function(name, model){
         let id = Math.floor(1000 + Math.random() * 1000) + "";
         while(this.locks.some(function(value){ return value.id == id;}) == 1){
             id = Math.floor(1000 + Math.random() * 1000) + "";
         }
-        this.locks.push(new Lock(name, id, model));
+        this.locks.push(new SMO.Lock(name, id, model));
     },
     addNewHeatingSystem : function(name, model){
         let id = Math.floor(100 + Math.random() * 100) + "";
         while(this.heatingSystems.some(function(value){ return value.id == id;}) == 1){
             id = Math.floor(100 + Math.random() * 100) + "";
         }
-        this.heatingSystems.push(new HeatingSystem(name, id, model));
+        this.heatingSystems.push(new SMO.HeatingSystem(name, id, model));
     },
     getListOfDevices: function(){
         let buf = "";
